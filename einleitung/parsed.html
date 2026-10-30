@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>parsed_output_stage2_joined</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<!-- PDF_PAGE: 1 -->
+<h1 id="einleitung.">Einleitung.</h1>
+<h2 id="aufgabe-und-einteilung-der-stilistik.">Aufgabe und Einteilung
+der Stilistik.</h2>
+<p>§ 1 <em>Wenn</em> wir die Geschichte des Lateinschreibens von der
+Zeit an, in welcher das gebildete Schriftlatein aufgehört hat ein
+lebendes zu sein<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>, in den allgemeinsten Umrissen
+betrachten, so stellen sich uns in derselben zwei unterschiedliche
+Hauptperioden dar. Die erste erstreckt sich bis zum Wiederaufleben der
+klassischen Studien in den Kulturländern des Abendlands, die zweite
+reicht bis auf unsere Tage; jede zerfällt wieder in besondere
+Zeitabschnitte. In der <em>ersten</em> Periode ist das Latein die
+Sprache der Kirche, der Wissenschaft und des geschäftlichen
+(staatlichen, privatrechtlichen) Verkehrs (mittelalterliches
+Schriftlatein) und bildet das internationale Band der abendländischen
+Völker; weil christlich politische Weltsprache, ist die schulmäßige
+Erlernung des Lateins ein unabweisbares Bedürfnis. Dies hat zur Folge,
+daß es auch behandelt wird als etwas, das über die Befriedigung des
+Bedürfnisses hinaus so gut wie keinen Wert hat. Wo der überlieferte
+Wortschatz der Sprache diesem nicht entgegenkommt, wird ihr Gewalt
+angethan; sie muß sich zurichten und formen lassen für die Dienste, zu
+welchen man sie brauchen will. Für <!-- PDF_PAGE: 2 --> sich selbst wird
+ihr wenig Bedeutung beigelegt und somit auch ihr eigentliches Wesen
+nicht besonders studiert oder geachtet. Doch ist im Gebrauch der
+lateinischen Sprache nach Zeiten und nach den Gebieten, in deren Dienst
+sie sich stellt, ein Unterschied zu machen. In der Übergangszeit, deren
+Anfang in den verschiedenen ehemaligen römischen Provinzen verschieden,
+im allgemeinen in die letzten Dezennien des 6., deren Ende in die erste
+Hälfte des 9. Jahrhunderts fällt, dringt die Herrschaft der lateinischen
+Volkssprache (vulgäres Mittellatein) in den Ländern des einstigen <span
+lang="la"><i>imperium Romanum</i></span> bis in die höchsten und
+gebildetsten Kreise. Von der Mitte des 9. bis ungefähr zur Mitte des 13.
+Jahrhunderts trägt das Schriftlatein den Charakter der Reproduktion des
+untergegangenen Kunstlateins, eine Frucht der litterarischen
+Renaissancebestrebungen Karls des Großen und der Karolingerzeit. Dieses
+Latein trat in Gegensatz zu den „aus verschieden entwickeltem
+Vulgärlatein“ hervorgegangenen sich mehr und mehr individuell
+ausbildenden romanischen Landessprachen und den eigenartigen
+germanischen Volkssprachen, ohne sich jedoch deren Einflüssen ganz
+entziehen zu können. Etwa von der Mitte des 13. Jahrh. an beginnt das
+traditionelle litterarische Latein in nicht wenigen Produktionen nahezu
+bis zur Unkenntlichkeit entstellt zu werden. — Aber innerhalb der drei
+Zeitstufen des mittelalterlichen Lateins verhalten sich die Gebiete, in
+denen Latein zur Verwendung kommt, wenn auch unter dem Einfluß ihrer
+Zeit stehend, zu dem römischen Schrifttum verschieden. Die Latinität der
+Geschäftssprache, von Anfang an aus schrift- und vulgärlateinischen
+Elementen zusammengesetzt, entfernte sich in dem Grade von dem
+Schriftlatein, als romanische oder auch germanische Sprachelemente sich
+vordrängten. Die Kirchensprache, nicht nur in dem Bibellatein wurzelnd
+<a href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>, sondern mit der Sprache, wie sie
+sich vor dem Zusammenbruch der Stützen antiker Bildung in der
+christlichen und profanen Litteratur gestaltet hatte, im
+ununterbrochenen Zusammenhang bleibend, wußte in den Liturgien und
+Liedern für den
+Gedankenkreis<!-- PDF_PAGE: 3; original word break: Gedanken-|kreis -->
+der <span lang="la">‘una sancta catholica et apostolica ecclesia’</span>
+stets den entsprechendsten und würdigsten Ausdruck zu finden<a
+href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>. Die geistliche und weltliche
+Wissenschaft behielt nach Wiederherstellung der grammatischen
+Korrektheit des Schriftlateins in der Karolinger-Epoche unter dem
+Einfluß tüchtiger, antike Bildungselemente festhaltender oder
+wiederbelebender Kloster-, Dom- und Stiftsschulen<a href="#fn4"
+class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> und
+vertreten durch ebenso formgewandte als geistvolle und gelehrte
+Schriftsteller, die sich wohl auch klassischen Vorbildern näherten<a
+href="#fn5" class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a>, das Gepräge des übermittelten
+Schriftlateins bei, bis dieses infolge der eigenartigen Ausgestaltung
+des mittelalterlichen Denkens in der Scholastik<a href="#fn6"
+class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>
+immer mehr verblaßte und schließlich einem Latein Platz machte, das nur
+noch von ferne an den antiken Ursprung erinnerte. Hatte der
+transzendentale<!-- PDF_PAGE: 4; original word break: trans-|zendentale -->
+und asketische Charakter der scholastischen Wissenschaft gegen die
+antike Bildung und antike Darstellungsform überhaupt gleichgiltig
+gemacht, so wurde diese Gleichgiltigkeit noch vermehrt, als die
+Wissenschaft in <span lang="la"><i>dumeta</i></span> und <span
+lang="la"><i>spinae disserendi</i></span> sich verlor und der sonstige
+Wissenstrieb in den sklavisch wörtlichen Übersetzungen aus dem
+Griechischen, noch mehr in den bis zur Unverständlichkeit barbarischen
+Übertragungen aus dem Arabischen ins Lateinische seine Befriedigung
+suchte.</p>
+<p>Litteraturangaben über das Kirchen- u. mittelalterliche Latein bei
+Gustav Körting, Encyklopädie und Methodologie der romanischen
+Philologie. Erster Theil. Heilbronn 1884 S. 132. 133. Hiezu G.
+Bernhardy, Grundriß der römischen Litteratur, Einleitung S. 64* ff.; K.
+Bursian, Geschichte der klassischen Philologie in Deutschland, München
+1883 I S. 8 ff.; L. v. Urlichs in des Bearbeiters Handbuch der
+klassischen Altertumswissenschaft. Erster Band. Nördlingen 1886 S. 38.
+39; J. H. Schmalz im Antibarbarus der lateinischen Sprache von
+Krebs-Allgayer, Basel 1886 S. 12 ff.; G. Gröber im obenerwähnten
+Aufsatz; K. Sittl, Zur Beurteilung des sogenannten Mittellateins, in
+Wölfflin’s Archiv II 550 ff.; Derselbe in Bursian-Müller’s Jahresbericht
+über die Fortschritte der kl. Altertumswissenschaft Bd. 40 S. 318
+ff.</p>
+<p>§ 2 Mit der Wiederbelebung der klassischen Studien im 15. Jahrhundert
+beginnt auch in der Geschichte des Lateinschreibens eine <em>neue</em>
+Epoche, die sich ebenso wie die mittelalterliche in drei Abschnitte
+zerlegen läßt. Als das klassische Altertum in Italien und dann in den
+transalpinischen Ländern Europas seine Wiedergeburt feierte, brach eine
+Zeit an, in der altklassische Bildung und höhere Bildung überhaupt
+identische Begriffe wurden. Die Alten galten als die Quelle, aus der
+materielle wie formale Geisteskultur zu schöpfen war; das höchste
+Bestreben war ebenso zu denken, zu sprechen und zu schreiben wie die
+Alten, insbesondere die Römer. Und während man heutzutage es liebt das
+Antike zu modernisieren, d. h. moderne Anschauungen, Bezeichnungen und
+Beziehungen in die antiken Verhältnisse zu übertragen, um diese dem
+modernen Verständnis nahe zu bringen, war es damals, namentlich im Lande
+der Wiege des Humanismus, Sitte das Moderne zu antikisieren, d. h.
+antike Begriffe und Einrichtungen in die modernen Zustände
+hineinzutragen, um diese ganz nach jenen umzugestalten. Mit diesen
+Renaissancebestrebungen trat man zu der bisherigen Geistesrichtung und
+deren Organ, dem ihrem Bedürfnisse angepaßten Latein, in einen
+<!-- PDF_PAGE: 5 --> schroffen Gegensatz, dessen man sich in letzterer
+Hinsicht um so stärker bewußt ward, als man über dieses als barbarisch
+erkannte und verspottete Latein hinweg nicht etwa an das Latein des 4.
+oder 5. Jahrhunderts anknüpfte, sondern auf die eigentlich klassische
+Zeit zurückging, ja in Italien, wo ein besonders empfänglicher Sinn für
+Formschönheit herrschte, eine Richtung auftrat, welche unter den
+mustergiltigen Schriftstellern den Meister des klassischen Prosastils,
+Cicero, ausschließlich zum Vorbild der Nachahmung sich erkor <a
+href="#fn7" class="footnote-ref" id="fnref7"
+role="doc-noteref"><sup>7</sup></a>. Doch war die Herrschaft des
+begeisterten Humanismus, nach Anfang und Ende in den einzelnen
+Kulturländern verschieden, von keiner langen Dauer. Die
+Durchschnittsdauer derselben erstreckt sich von der Mitte des 15. bis
+zur Mitte des 16. Jahrhunderts. Der Humanismus blieb auf halbem Wege
+stehen. Durch die in den Vordergrund des geistigen Interesses tretenden
+kirchlichen Bewegungen des Reformationszeitalters, das ihn in seine
+Dienste genommen, zum Stillstand gebracht und eingeengt gelang es ihm
+nicht, auch das griechische Altertum, die wahre Heimat der klassischen
+Antike, in dem Grade wie das römische in das Kulturleben der Gegenwart
+einzubilden und damit den Sinn für das wahrhaft und bleibend Schöne
+allseitig zu wecken, zu läutern und zu veredeln. Jenes Zeitalter fand
+eben die Formel nicht, das antik Humane mit dem wahrhaft Christlichen in
+Einklang zu bringen. Die an sich vollberechtigte Kultur des klassischen
+Lateins, auf die Dauer nicht gehörig unterstützt oder harmonisch ergänzt
+durch die Pflege des klassisch Griechischen, artete in eine
+Einseitigkeit aus, durch die das Wesen des Humanismus verkümmern mußte,
+da der Humanismus nur in der Verbindung der griechischen mit der
+römischen Kultur sein Lebenselement hat. Doch hat in der Geschichte des
+Lateinschreibens der Humanismus jener Zeit das unvergängliche Verdienst
+das Verständnis der antik schönen Form wieder erschlossen und die
+Fähigkeit diese in litterarischen Erzeugnissen wiederzugeben erweckt zu
+haben, so daß von nun an die Sprache vor gewaltsamer Entstellung ins
+Barbarische gesichert erscheint.</p>
+<p><em>Georg Voigt</em>, Die Wiederbelebung des klassischen Altertums
+(2. Bearbeitung), 2 Bde, Berlin 1880. 81; <em>Bernhardy</em> l. l. S. 94
+ff.; <em>Bursian</em> l. l. I 91 ff.; <em>v. Urlichs</em> l. l. S. 39
+ff.; <!-- PDF_PAGE: 6 --> <em>Fr. Aug. Eckstein</em>, Lateinischer
+Unterricht, in Schmid’s Encyklopädie des gesammten Erziehungs- und
+Unterrichtswesens, Gotha 1878 XI. Bd. S. 516 ff. (wieder abgedruckt im
+IV. Bd. der 2. Aufl. der Encyklopädie, auch als Separatabdruck 1882
+erschienen); Derselbe, Lat. u. Griech. Unterricht, herausgegeben von
+<em>H. Heyden</em>, Leipzig 1887 S. 62 ff.; <em>Laas</em>, Der deutsche
+Unterricht, 2. Aufl. besorgt von <em>Immelmann</em>, Berlin 1886 S. 20
+ff.</p>
+<p>Die Verkümmerung des Humanismus, die in Deutschland von der zweiten
+Hälfte des 16. Jahrh. an auf Schulen und im Leben zutage tritt, übte
+auch ihre Wirkung auf das Lateinschreiben. Wenn auch die ächte Form
+antiker Darstellung, wie sie die Italiener wiedergewonnen hatten,
+fortwährend als Ideal galt, dem man sich nähern müsse, und wenigstens
+von Einzelnen immer noch klassisch geschrieben wurde und deren
+Bemühungen Anerkennung fanden, so trug doch der lateinische Stil im
+allgemeinen das Gepräge seiner Zeit: die Zeit der zweiten Hälfte des 16.
+Jahrhunderts bis zur Mitte des 18. war in Deutschland im allgemeinen
+eine von den Musen und Gratien verlassene, und so machte denn auch das
+Latein alle jene Geschmacklosigkeiten mit, an denen jener Zeitraum
+krankte. Dazu kam, daß die Sprache als ausschließliches Mittel gelehrter
+Mitteilung von vielen gehandhabt wurde, die ihrer nur unzureichend
+mächtig waren, daß sie in die Dienste des Bedürfnisses zurückfiel und
+somit von neuem eine sehr unerfreuliche Gestalt annahm. Aber das Latein
+verlor der Blüteperiode des Humanismus gegenüber nicht blos innerlich an
+Eleganz sondern auch äußerlich an Terrain. Während noch um die Mitte des
+16. Jahrhunderts von den in Deutschland erschienenen Büchern fast 70
+Prozent in lateinischer und nur etwa 30 Prozent in deutscher Sprache
+geschrieben sind, zu welch letzterem Prozentsatz die protestantischen
+polemischen und Erbauungsschriften den größten Beitrag lieferten — die
+Wissenschaft der protestantischen Theologie bediente sich fast nur des
+Lateins —, und während noch zu Ende jenes Jahrh. die lateinische
+Litteratur 66, die deutsche 34 Prozent betrug, stieg im 17. Jahrh. der
+deutsche Prozentsatz stetig und zwar so, daß er im letzten Dezennium des
+Jahrh. den lateinischen bereits überwog (54 Proz. deutsch, 44 lat., 2
+französisch). Im 18. Jahrh. sank der lateinische Prozentsatz sehr rasch;
+mit der absoluten Herrschaft des Lateins ging es zu Ende<a href="#fn8"
+class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>. Im
+vorigen Zeitabschnitt war <!-- PDF_PAGE: 7 --> das Latein allgemeines
+Organ der Gebildeten überhaupt gewesen; in diesem war es zum Organ der
+Gelehrten eingeengt worden; die Gebildeten, die höheren
+Gesellschaftsklassen wendeten sich dem Französischen zu.</p>
+<p>Von der Mitte des 18. Jahrhunderts und in den folgenden Zeiten (19.
+Jahrh.) gewinnt der lateinische Stil im Zusammenhang mit dem Aufschwung,
+den die Humanitätswissenschaften durch die Wiederentdeckung des wahrhaft
+Klassischen in der antiken, besonders griechischen Welt nahmen, an
+Reinheit und klassischer Färbung durch bedeutende Vertreter der
+philologischen Wissenschaft, wie M. Gesner, Joh. Aug. Ernesti,
+Fr. Aug. Wolf, Gottfr. Hermann und eine Reihe ihrer Schüler, deren
+Anregungen bis auf den heutigen Tag indirekt und direkt auf die
+philologische Litteratur und auf das propädeutische Latein in der Schule
+mit mehr oder minder günstigem Erfolge fortwirken. Aber der Kreis der
+Lateinschreibenden wird ein immer engerer. Im letzten Dezennium des 18.
+Jahrh. beträgt die Summe der lateinisch geschriebenen Bücher kaum mehr 6
+Prozent der Gesamtproduktion gegenüber der deutschen Litteratur mit etwa
+89 und der französischen in Deutschland verlegten Bücher mit ungefähr 5
+Prozent. Im allgemeinen hört das Latein auf, Bedürfnis
+wissenschaftlicher Darstellung zu sein. Dieser genügt nunmehr die
+Muttersprache. Ja diese genügt der Wissenschaft nicht blos, sondern
+erscheint bald genug als deren ausschließlich angemessenes Organ. Hand
+in Hand mit der mächtigen und anscheinend selbständigen Entwicklung des
+modernen Geistes entfaltet sie eine Fülle von Darstellungsmitteln, mit
+welcher die antike Sprache nicht mehr Schritt halten kann. Die
+Wissenschaft legt ihren ganzen Reichtum in der deutschen Sprache nieder.
+Als Mittel wissenschaftlicher Mitteilung ist das Latein entbehrlich, ja,
+wie man sagt, unbrauchbar geworden. Das Lateinschreiben wird von der
+Gegenwart als Pedanterie verworfen, die deutsche Wissenschaft, sagt man,
+hat ihm den Stab gebrochen; allein es fragt sich, ob die Stilistik sich
+dieser Wissenschaft nicht notwendig machen, ja als einen integrierenden
+Teil von ihr behaupten kann.</p>
+<!-- PDF_PAGE: 8 -->
+<p>§ 3 Die Beantwortung dieser Frage ist bedingt durch eine Vorfrage:
+welches war in jeder der Hauptperioden die Stellung der Stilistik? In
+der ersten gibt es begreiflicher Weise so gut als keine; was in den
+Schulen des Mittelalters etwa Stilistisches gelehrt wurde, bestand in
+grammatischen und rhetorischen Vorschriften<a href="#fn9"
+class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>. In
+der zweiten Hauptperiode herrscht zunächst das Bestreben vor, sich des
+wieder errungenen Besitzes in seiner <em>Reinheit</em> und in seiner
+<em>Vollständigkeit</em> zu versichern, späterhin auch dem aufs neue
+einreißenden Verderben entgegen zu wirken. Daher erscheinen in den
+beiden ersten Abschnitten dieser Periode vorzugsweise Antibarbari,
+Phraseologieen und Florilegien aller Art. Das Hauptwerk schreibt der
+eifrige Wächter des neu erwachten Humanismus <em>Laurentius Valla</em>
+(Lorenzo della Valle, 1407—1457) um das Jahr 1444. Unter dem Titel <span
+lang="la"><i>de linguae latinae elegantiis libri sex</i></span>, worin
+er seinen Grundsatz: <span lang="la">‘ego pro lege accipio quidquid
+magnis auctoribus placuit’</span> durchzuführen suchte, ist es von
+1471—1536 in 59 Auflagen verbreitet worden<a href="#fn10"
+class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>.
+Auch <em>Desiderius Erasmus</em> übte auf dem Gebiet des lateinischen
+Stils einen tiefgreifenden Einfluß aus. Nicht nur machte er Valla’s Werk
+durch einen Auszug (<span lang="la"><i>Epitome in Elegantiarum libros L.
+Vallae</i></span>) in den transalpinischen Kulturländern allgemeiner
+zugänglich, sondern griff auch selbstthätig ein durch seine 1512 zu
+London erschienene und seitdem außerordentlich oft gedruckte und noch im
+17. Jahrh. bearbeitete Schrift <span lang="la"><i>De duplici copia
+verborum ac rerum commentarii duo</i></span>, ferner durch die Bücher
+<span lang="la"><i>De ratione conscribendi epistolas</i></span> (1520.
+22), <span lang="la"><i>Antibarbara</i></span> (1522) und viele andere
+hauptsächlich auf die
+Methodik<!-- PDF_PAGE: 9; original word break: Me-|thodik --> des
+Unterrichts bezügliche Schriften (Bursian l. l. S. 146), in seinem
+Bestreben allseitig Unterstützung findend, so in England durch Thomas
+Linacre (Linacer), dessen Buch <span lang="la"><i>De emendata structura
+latini sermonis</i></span>, London 1514, auch in Deutschland, Frankreich
+und Italien Verbreitung und Bearbeitung fand, in Frankreich durch des
+Holländers Jan von Pauteren (Johannes Despauterius) Arbeiten, dessen
+<span lang="la"><i>commentarii grammatici</i></span>, von Robert
+Estienne (Robertus Stephanus) Paris 1537 herausgegeben, in jenem Lande
+von epochemachender Bedeutung wurden, in Spanien durch Juan Luis de
+Vives, dessen methodische Arbeiten deutschen Schulmännern, wie dem für
+reine Latinität in der Schule unermüdlichen Sturm, nicht unbekannt
+blieben (Eckstein, Lat. Unterr. S. 84). Aus der Menge der übrigen
+Schriften des 16., 17. und 18. Jahrh. heben wir nur einige der für
+Deutschland wichtigsten hervor<a href="#fn11" class="footnote-ref"
+id="fnref11" role="doc-noteref"><sup>11</sup></a>: <span
+lang="la"><i>Ant. Schori phrases linguae latinae.</i></span> Colon.
+1548, noch im 18. Jahrh. neu aufgelegt. <span lang="la"><i>Oberti
+Gifanii</i></span> (ICti Ingolst.) <span lang="la"><i>observationes
+singulares in linguam latinam, in quibus ex abditissimo usu politioris
+latinitatis dictionum, verborum, particularum significatus plane
+reconditi in nullisque adeo Lexicis sive Thesauris vulgatis obvii
+eruuntur et explicantur, multa item Authorum Latinorum loca ex libb.
+Msstis corriguntur ac restituuntur.</i></span> Francof. 1624, noch 1762
+in Altenburg neu gedruckt. <span lang="la"><i>Gerh. Joann. Vossii de
+vitiis sermonis et glossematis latino-barbaris libri IV.</i></span>
+Amstelod. 1645. Francof. 1669; vgl. hiezu <span
+lang="la"><i>Animadversiones in Vossii libros de vitiis sermonis
+latini</i></span>, Ravennae 1647 von Kaspar Schoppe (Scioppius, dem
+Manne der Polemik). Im Jahre 1713 erscheint zu Amsterdam das Sammelwerk
+des <span lang="la"><i>Rich. Ketelius: de elegantiori latinitate
+comparanda scriptores selecti</i></span>; vgl. auch <span
+lang="la"><i>Jakob Burchard, De linguae latinae in Germania per XVII
+saecula amplius fatis</i></span>, Hannover 1713, wozu ein
+<!-- PDF_PAGE: 10 --> Supplement, Wolffenbüttel 1721 erschien. Über
+andere Sammelwerke Eckstein in Schmid’s Enc. XI 671. Aber die
+Kollektaneen Einzelner hören darum noch nicht auf; <span
+lang="la"><i>Joann. Jensii purae et impurae latinitatis collectanea.
+Roterod. 1720 (Lips. 1728).</i></span> Ein interessantes Buch ist <span
+lang="la"><i>Dan. Georg. Morhofii de pura dictione latina liber. Jo.
+Laur. Moshemius Th. D. et P. P. O. edidit et notas adjecit. Hannoverae
+1725</i></span> (ein opus postumum Morhof’s). Wichtig ist teils das
+Litteraturgeschichtliche, teils sind es Morhof’s Urtheile über die
+Latinität der modernen Völker. Die Italiener und Deutschen werden gelobt
+p. 92, die Holländer und Engländer p. 36 und p. 41 als affektiert
+getadelt; aber den Preis der Latinität erhalten für seine Zeit
+wenigstens die Franzosen p. 40: <span lang="la"><i>sunt enim in illis,
+qui eleganter adeo in sermone ligato et soluto scribunt, ut vel
+provocare ipsos antiquos possint, quum Itali, Belgae, Hispani, Germani,
+Angli omnem illam curam purae Latinitatis seposuerint</i></span> In
+methodischer Hinsicht verlangt er, um dem Einflusse der Muttersprache
+vorzubeugen, <span lang="la"><i>ut statim in prima aetate animus a
+patria lingua abducatur eiusque diversitas a latina per omnes loquendi
+formulas et phrases, constructiones et particulas notetur,</i></span>
+was der Herausgeber Mosheim als eine <span lang="la"><i>res infinitae
+propemodum observationis</i></span> für unmöglich erklärt. Morhof selbst
+schreibt durchaus unkorrekt, wenn auch nicht eben geziert, wie die
+meisten seiner Zeitgenossen. Sehr verdienstlich sind Vorstius’ Arbeiten
+<span lang="la"><i>de latinitate falso suspecta deque latinae linguae
+cum germanica convenientia, Rostoch. 1652; de latinitate merito
+suspecta<a href="#fn12" class="footnote-ref" id="fnref12"
+role="doc-noteref"><sup>12</sup></a>, ib. 1652; de latinitate selecta et
+vulgo fere neglecta liber,</i></span> ein von Bodenburg herausgegebenes
+opus postumum, Berol. 1718 (s. Bursian l. l. S. 306); neu herausgegeben
+samt den beiden anderen mit Anmerkungen von <span lang="la"><i>Jo.
+Matth. Gesner, Berol. 1730,</i></span> welcher in der Vorrede die auch
+für unsere Zeit noch treffende Bemerkung macht: <span
+lang="la"><i>facile dicendi genus his vulgo tribuitur, qui vitiosissime
+et absurdissime scribunt; deinde</i></span> <!-- PDF_PAGE: 11 --> <span
+lang="la"><i>difficilem stilum illis objici solenne est, si qui
+diligentius et exquisitius normam latinae orationis et ornamenta dicendi
+sequantur</i></span>, und dieselbe nach seiner Weise geistreich und
+energisch durchführt. An Vorst’s letztgenannte Schrift schließen sich
+rühmlich an erstlich <span lang="la"><i>Fr. Ott. Menckenii observationum
+lat. linguae liber, in quo varia rarioris usus genera dicendi
+annotantur</i></span>, Lips. 1745, ferner <span lang="la"><i>J. Mich.
+Heusingeri antibarbarae latini sermonis observationes secundis curis
+politae novisque accessionibus auctae</i></span> (ein Anhang von <span
+lang="la"><i>Jo. Mich. Heusingeri emendationum libri duo ed. Frid.
+Heusinger J. M. F. Gothae 1751</i></span>), worin Heusinger seine
+früheren Schriften gleichen Inhalts, namentlich seine Supplementa zu
+<span lang="la"><i>Christoph. Cellarii curae posteriores de barbarismis
+et idiotismis sermonis latini</i></span>, Jenae 1745, zusammengezogen
+und vermehrt hat (vgl. Bursian S. 396. 397). Er selbst will laut der
+Vorrede sein Buch als einen Nachtrag angesehen wissen zu <span
+lang="la"><i>Jo. Fr. Noltenii lexicon lat. linguae
+antibarbarum</i></span>, Helmst. 1730 (Lips. 2 voll. 1744. 48, Berol.
+1780), welcher alles Frühere zusammengetragen und einen gleichzeitigen
+Mitarbeiter gefunden hatte an Dan. Fr. Janus, dessen ‘Philologisches
+Lexikon der reinen und zierlichen Latinität’ u. s. w. ebenfalls 1730 zu
+Leipzig erschien.</p>
+<p>§ 4 Aber diese Bücher enthalten keine Stilistik, sondern arbeiten
+dieser blos in die Hand, teils negativ durch Ausmerzung der Barbarismen,
+teils positiv durch Herbeischaffung von Materialien. Eine eigentliche
+Lehre vom Stil getrennt von der Rhetorik ist zuerst auf würdige Weise
+(Hand S. 17) entworfen in <span lang="la"><i>Jo. Ludov. Praschii Rosetum
+seu praecepta stili latini.</i></span> Ratisbon. 1676; <span
+lang="la"><i>cura G. Nicolai Kriegk.</i></span> Jena 1702. In diesem
+Büchlein entwickelt der gebildete Jurist Prasche gesunde Ansichten über
+den Begriff des lat. Stils und über den Weg zu einem solchen zu
+gelangen. Beim Stil käme es nicht blos auf das grammatisch Richtige an;
+denn <span lang="la"><i>‘orationem grammatice quidem rectam, ceterum
+rudem, indigestam, insolentem, denique informem nemo stilum, opinor,
+dixerit’</i></span> (<span lang="la"><i>ed. Kriegk.</i></span> S. 9).
+Ebenso wenig genüge rhetorische Ausschmückung, wenn sie auch notwendig
+wäre. Stil sei die Form der Darstellung, wie sie der Weise der guten
+Lateiner ihre Gedanken auszudrücken gemäß sei; es käme also auf den
+<em>color</em> und zwar auf den <em>color sanus</em> an (S. 12–14). Das
+Buch hätte von Bedeutung werden können, wenn es von dem Ungeschmack
+jener Zeit näher beachtet worden <!-- PDF_PAGE: 12 --> wäre. Dagegen
+gewinnen, weil mit dem Strom der Zeit schwimmend, den größten Einfluß
+<span lang="la"><i>Jo. Gottl. Heineccii stili cultioris fundamenta.
+Francof. 1719; edit. VII</i></span>, von <em>Gesner</em> besorgt, <span
+lang="la"><i>Lips. 1743</i></span>; bis 1790 oft aufgelegt. Dieses Buch,
+nach seinem Erscheinen außerordentlich gerühmt<a href="#fn13"
+class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>
+und selbst von <em>Fr. Aug. Wolf</em> nicht ganz verworfen<a
+href="#fn14" class="footnote-ref" id="fnref14"
+role="doc-noteref"><sup>14</sup></a>, von <em>Ruhnken</em> aber (<span
+lang="la"><i>Epp. ad Ernesti ed. Tittm. Lips. 1812 p. 33</i></span>)
+<span lang="la"><i>liber futilis</i></span> genannt, hat ohne Zweifel
+mehr geschadet als genützt. Wenn auch <em>Heinecke</em>, von der
+systematischen Schule der Juristen kommend — er war zuletzt <span
+lang="la"><i>Professor iuris et philosophiae</i></span> in Halle —, in
+die Lehre vom Stil einen strengeren Gang zu bringen suchte als es bisher
+der Fall war, und mit der Weise Einzelbeobachtungen nach äußeren
+Gesichtspunkten zusammenzustellen brechen wollte, so besaß er doch
+keinen reinen Geschmack, um gegen die Sucht der Zeit nach sogenannten
+Eleganzen anzukämpfen. Nämlich alle Phraseologien und Antibarbari
+konnten der Geschmacklosigkeit nicht steuern, welche über Deutschland
+hereinbrach, als der Aufschwung, den die Muttersprache in der
+Reformation genommen hatte, in den Schrecken des dreißigjährigen Krieges
+untergegangen war. Vor der Rohheit, welche der Krieg verbreitet hatte,
+suchte man sich teils durch lateinische, teils durch französische
+Eleganz zu schützen, und die Verbindung derselben mit der damaligen
+Unbehilflichkeit des Volkes gab eine seltsame Mischsprache (‘Cäsar
+spoliirte den publiquen Tresor’; ‘das Vaterland ist unser aller Papa’ u.
+dgl.). <em>Elegant</em> wurde das Losungswort der Stilisten, und da man
+den Sinn für Wahrheit und Natur verloren hatte, hieß sehr bald das
+Seltene, Gezierte und Unnatürliche elegant. Aus diesem Geschmack heraus
+schreibt und lehrt <em>Heinecke</em> und <!-- PDF_PAGE: 13 --> hilft ihn
+dann seinerseits in den Schulen befestigen. Er empfiehlt die <span
+lang="la"><i>voces</i></span> und <span lang="la"><i>phrases
+elegantiores</i></span>, die <span lang="la"><i>constructiones
+rariores</i></span> p. 341, <span lang="la"><i>phrases
+selectiores</i></span> p. 348, ferner die <span lang="la"><i>ingeniosa
+judicia vel acumina</i></span> p. 345 u. dgl., und schreibt in einem dem
+Buche angehängten Panegyrikus auf den Juristen <em>Stryck</em>, wie wir
+lesen p. 444: <span lang="la"><i>Stryckius — ex Anglia solvit secundoque
+ventorum flatu in Bataviam appulit. Numquam profecto salutare Veneris
+sidus blandius risisse, numquam Castores fulgorem beneficum conseruisse
+libentius existimo, quam illo die, quo Stryckius inter faustas amicorum
+acclamationes navem conscendit. At finge coelum subito esse turbatum,
+finge mare ventis commotum tenebris totum inhorruisse, navem porro vasto
+gurgite jactatam et nec in remis nec clavo quidpiam praesidii reliquum,
+sed tristia omnia, exitiosa, conclamata, quis dubitaret nostrum tot
+parentum votis divinitus destinatum salvum ad litus fuisse evasurum
+ipsoque Julio Caesare multo confidentiorem timentem nautam allocuturum:
+quid times? Stryckium vehis!</i></span></p>
+<p>Daher stammt denn auch jener Unsinn des <span lang="la"><i>calamum
+stringere</i></span>, die Feder zücken, bei gelehrten Streitigkeiten,
+des <span lang="la"><i>foetum lambere</i></span> vom Ausfeilen eines
+Schriftwerks, des <span lang="la"><i>nares emungere</i></span> in
+alberner Anwendung des Horazischen <span lang="la"><i>emunctae naris
+homo</i></span>, vermöge welcher sogar geschrieben wurde: <span
+lang="la"><i>quorum unus quoad mores et litteras ita eminet, ut ei Musae
+ipsae nares emunxisse videantur.</i></span> Eine wahre Fundgrube von
+solchen Kostbarkeiten ist das von <em>Ernesti</em> bevorwortete
+lateinisch-deutsche und deutsch-lateinische Lexikon von <em>Erycus
+Weißmann</em>, Leipz. 1758, 12te Aufl. 1775. Dort wird z. B. für die
+<em>Wahrheit sagen</em> als erste Phrasis angegeben <span
+lang="la"><i>folium recitare Sibyllae</i></span> (aus Juvenal. 8, 126),
+hiernächst <span lang="la"><i>oracula loqui</i></span>; dann erst folgt
+<span lang="la"><i>vera dicere</i></span>. Ein alberner Mensch wird nach
+(Plaut. Truc. 4, 4, 1) und Laber. com. (frg. 92) <span lang="la"><i>homo
+bliteus</i></span> genannt. Einem Unglück entgehen heißt <span
+lang="la"><i>plantam coeno evellere</i></span>, ein Unglücklicher: <span
+lang="la"><i>quarta luna natus</i></span>, man stürzt sich selbst ins
+Unglück: <span lang="la"><i>turdus sibi ipse cacat exitium</i></span> u.
+s. w. Mit dieser Sippschaft verwandt ist das <span lang="la"><i>gaudere
+aliqua re</i></span> für <span lang="la"><i>habere</i></span>, was noch
+bis auf die neueste Zeit hin und wieder in den Schulen spukt<a
+href="#fn15" class="footnote-ref" id="fnref15"
+role="doc-noteref"><sup>15</sup></a>.</p>
+<!-- PDF_PAGE: 14 -->
+<p>Neben der Jagd auf solche Phrasen ging die Pflege dreier rhetorischer
+Künste her, der <span lang="la"><i>imitatio, variatio,
+dilatatio</i></span>, welche nicht sowohl an sich verwerflich waren, als
+durch den Mißbrauch schädlich wirkten, der es mit ihnen bis zur
+widerwärtigsten Künstelei trieb. Was die <span
+lang="la"><i>imitatio</i></span> betrifft<a href="#fn16"
+class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>,
+so war es Sitte (vgl. <em>Heinecke</em> p. 366) irgend ein Produkt in
+ciceronianischen, livianischen, taciteischen, plinianischen Stil
+umzusetzen; was sie mitunter für Früchte trug, haben wir an jener Probe
+aus dem Panegyrikus auf Stryck gesehen. Merkwürdig ists, daß selbst
+<em>Wolf</em> (Encyclop. S. 204) diese Umwandlung der Stilarten noch
+empfiehlt. Am ärgsten aber wurde es mit der <span
+lang="la"><i>variatio</i></span> und <span
+lang="la"><i>dilatatio</i></span> getrieben. Schon <em>Erasmus</em>
+variiert in seiner oben angeführten Schrift <span lang="la"><i>de
+duplici copia verborum</i></span> das Sätzchen ‘<span
+lang="la"><i>semper, dum vivam, tui meminero</i></span>’ auf mehr als
+zehn enggedruckten Oktavseiten, und der Jesuit <em>Wagner</em> in seiner
+<span lang="la"><i>Compendiaria methodus addiscendi tres praecipuas
+latinae linguae virtutes, puritatem, elegantiam et copiam</i></span>,
+Diling. 1736 schreibt p. 88 ff. dieses Kunststück noch zwei Jahrhunderte
+später als musterhaft ab, was übrigens nicht Wunder nehmen kann, da es
+sogar eine eigene Litteratur über diesen beliebten Zweig der
+rhetorisch-stilistischen Schulübungen gab und auch <em>Heinecke</em>
+nicht blos der <span lang="la"><i>imitatio</i></span> sondern auch der
+<span lang="la"><i>variatio</i></span> und <span
+lang="la"><i>dilatatio</i></span> das Wort redete<a href="#fn17"
+class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a>.
+Von der <span lang="la"><i>dilatatio</i></span> gibt ebenfalls
+<em>Erasmus</em> im zweiten Buche jener Schrift merkwürdige Beispiele,
+von welchen wir das kleinste (p. 238) hersetzen wollen: <span
+lang="la"><i>Totus commaduit. A summo</i></span> <!-- PDF_PAGE: 15 -->
+<span lang="la"><i>capillo ad imum usque calcaneum pluvia commaduit.
+Caput, humeri, pectus, venter, tibiae, totum denique corpus pluvia
+distillabat.</i></span></p>
+<p>§ 5 Während nun in den Schulen diese größtenteils brotlosen Künste
+getrieben wurden und das Latein so sehr seine Würde verlor, daß es vor
+der Mitte des 18. Jahrh. in Deutschland wohl schwerlich mehr als drei
+geschmackvolle Stilisten gab, <em>Mosheim</em>, <em>Gesner</em> und
+<em>Ernesti</em>, hob sich auf der anderen Seite die Muttersprache,
+teilweise an die rein gebliebene Kirchen- und Bibelsprache anknüpfend,
+zu einer nie geahnten Darstellungsfähigkeit. Insbesondere setzte die
+deutsche Philosophie so viel neue Begriffe und Wörter in Umlauf, daß das
+Latein, wie es bisher betrieben und geübt wurde, nicht mehr zureichte.
+Dies fühlt schon Ernesti, der in seiner erwähnten Vorrede zum
+Weißmann’schen Lexikon sagt: „es sind freilich, zumal in der
+gegenwärtigen deutschen Art zu reden (1758), viel Ausdrücke, die der
+Ungeübte schwerlich recht übersetzen kann,“ und fernerhin klagt „über
+die in den deutschen Schulen und Schriften der Philosophen neuerlich
+ausgeheckten oder durch die ungeschickten Übersetzungen aus der
+französischen und anderen in unsere Sprache eingeschlichenen Wörter und
+Redensarten.“ Und Ernesti kannte noch keine andere Philosophie als die
+Wolf’sche, die er in seinen <span lang="la"><i>initiis solidioris
+doctrinae</i></span> mit solchem Glück in ein lateinisches Gewand zu
+kleiden suchte, daß Gesner in der Vorrede zu Vorst (s. oben S. 10) jenes
+Buch ein <span lang="la"><i>aureum opusculum</i></span> nennt, <span
+lang="la"><i>ediscendum his, si qui philosophiae veteri et novae ita
+operam dare velint, ut ab latini sermonis puritate et naturali
+pulchritudine non recedant.</i></span></p>
+<p>Mit der Ausbildung der deutschen Philosophie<a href="#fn18"
+class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>,
+deren einzelne Schulen auf die Bereicherung des Sprachschatzes mächtig
+einwirkten, mit der immer zunehmenden Kräftigung unserer Sprache durch
+die Dichter, deren Ausdrucksweise bald auch die Prosa hob und veredelte,
+wurde das Lateinschreiben in demselben Grade schwieriger, als es
+entbehrlich zu werden schien. Es genügte nicht mehr, was das Streben
+Gesner’s, Ernesti’s und ihrer Schüler war, des ächt lateinischen
+Sprachschatzes als solchen mächtig zu sein und das Latein innerhalb
+seiner selbst zu
+beherrschen<!-- PDF_PAGE: 16; original word break: be-|herrschen -->;
+man mußte dasselbe verfügbar haben in Bezug auf den innerhalb der
+deutschen Sprache entwickelten Reichtum; man mußte wissen, wie die Fülle
+der deutschen Diktion, die Masse von Anforderungen, welche besonders der
+wissenschaftliche Stil macht, zu decken sei durch die relative Armut der
+lateinischen Rede. Hier herrschte Überfluß, dort Mangel. Darum entstand
+die Frage: wie reichen die dem Lateiner karg zugemessenen
+Darstellungsmittel zur Deckung der deutschen Anforderungen aus? Es mußte
+geforscht werden, ob das Latein trotz seiner verhältnismäßigen Armut
+nicht vermögend sei, die Kraft seiner Mittel zu steigern, ob nicht das
+Vorhandene durch sachgemäße und energische Verwendung zu dem Bedürfnis
+ins rechte Verhältnis gesetzt, ob nicht durch scharfes Aufmerken im
+Latein Kräfte und Darstellungsmittel entdeckt werden könnten, welche
+bisher noch gar nicht waren aufgeboten worden. Diese Aufgabe hatte die
+Entwicklung der deutschen Sprache einer lateinischen Stilistik für
+Deutsche gestellt.</p>
+<p>Wurde diese Aufgabe zu lösen versucht, so ergab sich eine
+Sprachvergleichung der allerwichtigsten Art. Legt man mit Recht schon
+einen großen Wert auf sprachvergleichende Etymologie, welche doch nur
+den Leib des Wortes ins Auge faßt, und auf vergleichende Syntax, welche
+nur die Beziehungen und Fügungen der Worte betrachtet, so muß man
+wahrlich die Forschung für wissenschaftlich berechtigt anerkennen,
+welche sich so zu sagen die Seele der Sprache zum Gegenstand macht,
+welche in ihren Bereich alle die Kräfte zieht, durch welche die
+Gestaltung und Verkörperung der Gedanken in den beiden zu vergleichenden
+Sprachen bewerkstelligt wird. Es wird hier nicht Laut mit Laut oder
+Rektion mit Rektion, sondern Anschauung mit Anschauung, Denkform mit
+Denkform, Bild mit Bild, Organismus mit Organismus verglichen. Es ringen
+miteinander zwei Sprachen; jede mißt in diesem Ringen ihre Kraft an der
+Gegnerin, und durch die Forderungen, welche von dieser gestellt werden,
+kommen ihr die Mittel, über welche sie selbst verfügt, immer
+vollständiger zur Kenntnis. Und zwar kommt das Maß dieser Mittel nur
+dann recht an den Tag, wenn sich heterogene Sprachen messen, nicht eine
+reiche mit einer reichen, nicht eine moderne mit einer modernen; denn
+beide tauschen und vergleichen sich zu leicht. Somit ist zum fruchtbaren
+Kampfe mit dem Deutschen keine Sprache geeigneter als die lateinische;
+keine verhilft durch die Anstrengungen, welche sie machen muß, um dem
+Deutschen zu genügen, anschaulicher <!-- PDF_PAGE: 17 --> zur Einsicht
+in die Schätze der <em>Gegnerin</em>; in keiner bringt der Kampf die
+eigenen Kräfte mehr ans Tageslicht. Der Deutsche verzichte auf das
+Lateinschreiben, und er verzichtet zugleich auf ein aus dem Gegensatz zu
+gewinnendes Wissen von dem, was seine Sprache so reich macht, und auf
+eine stets sich mehrende Erkenntnis der im Lateinischen verfügbaren
+Kräfte. Man wende nicht ein, daß zur Gewinnung solcher Einsicht das
+Übersetzen in die Muttersprache zureichend sei. Hier werden wir nur
+veranlaßt den Leistungen einer armen Sprache mit den Mitteln einer
+reichen zu entsprechen; wir sind nur genötigt in unserem eigenen
+Besitztum recht zu Hause zu sein. Aber wir lernen die Kräfte nicht oder
+nur mangelhaft kennen, durch welche die lateinische Armut es mit dem
+deutschen Reichtum aufnimmt; wir beuten das Lateinische nicht aus, wir
+legen nicht diesem die Fragen und Probleme vor.</p>
+<p>§ 6 Somit liegt schon in der Aufgabe, die sich eine zeitgemäße
+Stilistik stellen muß, eine Rechtfertigung des Lateinschreibens; denn
+dessen wissenschaftlichen Wert wird Niemand leugnen können, der sich auf
+den Standpunkt der Sprachvergleichung zu stellen geneigt ist. Von diesem
+aus erachten wir die stilistischen Bemühungen für unangreifbar, so sehr
+wir auch zugestehen, daß Lateinschreiben nicht mehr Zweck für sich ist,
+und daß diese Sprache nicht mehr ausschließliches Werkzeug
+wissenschaftlicher Mitteilung sein kann. Doch können wir in letzter
+Beziehung nicht umhin auszusprechen, daß man sich von der
+Unzulänglichkeit des Latein für moderne Wissenschaft nicht selten die
+wunderlichsten Vorstellungen macht und oft aus Mangel an Sachkenntnis
+der Sprache die Schuld aufbürdet, welche man selber trägt. Was klar und
+richtig gedacht ist, läßt sich auch lateinisch sagen. Vornehme
+Redensarten sehen freilich lateinisch übersetzt oft nicht mehr vornehm
+aus; aber dafür kann das Latein nichts, welches die Möglichkeit, die es
+wie jede Sprache bietet, Gedanken-Armut hinter schöne Diktion zu
+verstecken, reichlich dadurch gut macht, daß es die vornehmen Geister
+nötigt, ihren Gedanken den Flitterputz auszuziehen und dieselben in
+ihrer Nacktheit darzustellen. — Vom sprachvergleichenden Standpunkt aus
+läßt sich auch leicht erweisen, daß Fertigkeit Latein zu sprechen und zu
+schreiben wenn auch nicht mehr den Gelehrten macht, gleichwohl noch
+immer eine Zierde der Gelehrsamkeit ist. Denn wahren Wert hat diese
+nicht ohne Bildung; Bildung aber ist nicht denkbar, ohne daß man, kurz
+gesagt, <!-- PDF_PAGE: 18 --> des Geistes Geschäfte versteht und ihn zu
+erkennen vermag in der Arbeit, mit welcher er sich selbst am
+unmittelbarsten und reinsten ausspricht. Dies kann aber Niemand, der
+bloß instinktmäßig, wie das Kind, die eigene Sprache spricht, nicht aber
+Kenntnis nimmt von der Verschiedenheit der Formen, in denen der Geist
+bei den verschiedenen Völkern sich ausprägt, oder der bei den der
+eigenen Sprache nächstverwandten Formen stehen bleibt, ohne sich auf die
+wesentlich und ursprünglich verschiedenen einzulassen. Mit jenem
+Standpunkt endlich ist das Lateinschreiben in der Schule gerechtfertigt,
+welche den Geist bilden soll nicht nur durch Einführung in die
+herrlichsten Erzeugnisse desselben, sondern auch durch Nachweisung
+dessen, was er an sich, in seiner nächsten und zugänglichsten
+Bethätigung in der Sprache ist, zu dieser Nachweisung aber ebenfalls
+einer Darlegung der unterschiedlichen Formen bedarf, in denen er sich
+bei den vornehmsten Kulturvölkern offenbart.</p>
+<p>§ 7 Fragen wir nun, wie sich die Stilistik zu den historisch
+erwachsenen Anforderungen der Wissenschaft in unserem Jahrhundert
+verhalten hat, so können wir nicht leugnen, daß sie trotz der
+durchgreifendsten und wesentlichsten Verbesserungen im einzelnen doch im
+ganzen und ihrer Methodik nach auf dem vor hundert Jahren eingenommenen
+Standpunkte geblieben ist. Denn sie kam bis auf die neuesten Zeiten über
+die im vorigen Jahrhundert gäng und gäbe Einteilung nicht hinaus, kraft
+deren man zuerst von der Korrektheit, dann von der Schönheit des
+lateinischen Stiles handelte. Heinecke spricht in seinem ersten Teile
+<span lang="la"><i>de fundamentis stili grammaticis, rhetoricis,
+philosophicis</i></span>; von den beiden ersten sagt er (p. 198), daß
+sie <span lang="la"><i>ad orationis structuram et ornatum</i></span>,
+von den letzten, daß sie <span lang="la"><i>ad orationis materiam
+pertinent</i></span>. Wir haben hiemit nichts anderes als nach seinem
+eigenen Geständnis p. 55 eine unvollständige Grammatik, dann aus der
+Rhetorik den <span lang="la"><i>locus de elocutione</i></span>, endlich
+einen dürftigen Abriß der Logik. Seine beiden anderen Teile handeln, der
+zweite <span lang="la"><i>de variis scriptionibus in soluta oratione
+usitatis</i></span>, der dritte <span lang="la"><i>de variis cultioris
+stili facultatem assequendi subsidiis</i></span>, berühren die Kunst der
+Darstellung also gar nicht. Der oben genannte Jesuit <em>Wagner</em>
+handelt in seiner <span lang="la"><i>compendiaria methodus</i></span> 1)
+<span lang="la"><i>de puritate</i></span>, 2) <span lang="la"><i>de
+elegantia</i></span>, 3) <span lang="la"><i>de copia
+sermonis</i></span>. Sehen wir in einer Stilistik vom Anfang des
+jetzigen Jahrhunderts nach, so finden wir bei <!-- PDF_PAGE: 19 -->
+<span lang="la"><i>Hasse de causis linguae latinae</i></span> (1802) die
+Abteilungen 1) <span lang="la"><i>de oratione grammatica</i></span>, 2)
+<span lang="la"><i>de elegantia</i></span>, 3) <span lang="la"><i>de
+ornatu</i></span>; bei dem Vorläufer Hand’s, <em>August Matthiä</em>,
+Entwurf einer Theorie des lateinischen Stils, Leipzig 1826, wird der
+Stil nach seinen „wesentlichen Erfordernissen“, „Richtigkeit,
+Deutlichkeit, Annehmlichkeit und Angemessenheit“ behandelt. Endlich in
+<em>Ferdinand Hand’s</em> an sich vortrefflichem, höchst lehrreichem
+Werke (2. Aufl. 1839, 3. Aufl., bearbeitet von Dr. <em>Heinr. Ludw.
+Schmitt</em>, Jena 1880) finden wir nach allgemeinen und historischen
+Erörterungen 1. Lehren des lateinischen Stils in Bezug auf Korrektheit,
+2. Lehren des lateinischen Stils in Bezug auf Schönheit, und dies ist
+auch die Grundeinteilung von Heinichen’s Lehrbuch der Theorie des
+lateinischen Stils, zweite Aufl. Leipzig 1848, und im wesentlichen auch
+die von <em>Reinhold Kloß</em> in seinem Handbuch der lateinischen
+Stilistik herausgegeben von <em>Richard Kloß</em>. Leipzig, Teubner
+1874. — Erst in neuerer Zeit hat besonders <em>Moritz Seyffert</em> in
+seiner Palästra Ciceroniana praktisch im Geiste der Sprachvergleichung,
+wie wir sie auffassen, gearbeitet<a href="#fn19" class="footnote-ref"
+id="fnref19" role="doc-noteref"><sup>19</sup></a>, und auch <em>F. J.
+Grysar</em> hat in der 2. Aufl. seiner Theorie des lateinischen Stiles
+(Köln 1843) das uns vorschwebende Ziel vor Augen gehabt, wiewohl sich
+seine Behandlung des Gegenstandes wesentlich von unserer unterscheidet<a
+href="#fn20" class="footnote-ref" id="fnref20"
+role="doc-noteref"><sup>20</sup></a>. — Im Geiste der Vergleichung des
+Lateinischen und Deutschen ist die sechste Auflage des
+Krebs-Allgayer’schen Antibarbarus der lateinischen Sprache von <em>F. H.
+Schmalz</em> bearbeitet (Basel 1886—1888), unter dessen Hand das Buch
+für den Lehrer des lateinischen Stils ein ebenso zuverlässiger als
+unentbehrlicher Führer geworden ist. Über seine historische Stilistik s.
+weiter unten S. 25 <a href="#fn21" class="footnote-ref" id="fnref21"
+role="doc-noteref"><sup>21</sup></a>.</p>
+<!-- PDF_PAGE: 20 -->
+<p>Sind unsere Erörterungen richtig, so leuchtet von selbst ein, worin
+der Fehler der bisherigen Methode besteht. Wir sehen davon ab, daß sich
+manche neuere Stilistik äußerst kahl ausnehmen würde, wenn Grammatik und
+Rhetorik das ihnen entlehnte Material zurückforderten, wie denn, um nur
+älterer Werke zu gedenken, K. L. Bauer’s Anleitung zum richtigen und
+guten Ausdruck in der lat. Spr., Breslau 1775 (1796), ferner <span
+lang="la"><i>Scheller’s</i> bekannte Praecepta stili bene latini</span>,
+Lips. 1779 (1793) nichts weiter als Grammatiken sind; aber es
+berücksichtigt die gegenwärtige Stilistik das Hauptbedürfnis des
+Deutschen nicht, welches entstanden ist aus der Entwicklung unserer
+Sprache zu einem Reichtum von Darstellungsmitteln, dem das Latein nicht
+mehr gewachsen scheint. Wenn nämlich auch gehandelt wird von der Auswahl
+der Wörter und Redensarten, so hat man bei weitem mehr Ausscheidung des
+Fehlerhaften als Eröffnung der Fundgruben des Sprachschatzes im Auge.
+Man fährt noch immer fort, das Latein bloß in Bezug auf sich selbst zu
+betrachten, ohne anders als zufälliger Weise sprachvergleichend zu
+verfahren und ohne dem praktischen Bedürfnis des Lernenden entgegen zu
+kommen, der die Korrektheit des Stils in der Grammatik lernen, den
+Anforderungen eines schönen Stils aber unmöglich genügen kann, so lange
+es ihm an dem Notwendigsten, an den Darstellungsmitteln gebricht.</p>
+<p>Wir verweisen daher die Lehre von der Korrektheit, in sofern sie
+Dinge bespricht, welche in der Syntax gelehrt werden, in die Grammatik,
+die Lehre von der Schönheit des Stils, in sofern sie für den Stil in
+jeder Sprache gilt, in die Rhetorik, stellen uns zwischen Grammatik und
+Rhetorik in die Mitte und fragen, im allgemeinen ohne Rücksicht auf
+besondere Stilgattungen, <!-- PDF_PAGE: 21 --> nach dem Verhältnis der
+Darstellungsmittel im Latein zu denen im Deutschen<a href="#fn22"
+class="footnote-ref" id="fnref22"
+role="doc-noteref"><sup>22</sup></a>.</p>
+<p>§ 8 Da nun nach dem bisherigen von einem Lateinschreiben nicht die
+Rede sein kann, ohne daß der Deutsche weiß, wie er als lateinischer
+Stilist dem Reichtum des deutschen Ausdrucks genügen kann, so wird der
+erste Teil einer sprachvergleichenden Stilistik eine Topik sein müssen,
+eine Nachweisung der Fundstätten, wo der dem Deutschen entsprechende
+lateinische Ausdruck <!-- PDF_PAGE: 22 --> zu suchen ist. Diese Topik
+versucht dem Deutschen innerhalb der lateinischen Sprache die
+Darstellungsmittel aufzuzeigen, welche dem neuentwickelten Reichtum
+seiner Sprache gleichgeltend sind. Finden sich dieselben nicht fertig
+innerhalb des Sprachstoffes vor, sondern nur dem Wesen nach innerhalb
+grammatischer Strukturen, dann greift auch die Grammatik in die
+Stilistik ein; in dem grammatischen Verhältnis macht sich eine Kraft
+geltend, welche die Stelle eines materiell nicht vorhandenen oder nicht
+fügsamen und angemessen verwendbaren Wortes vertritt.</p>
+<p>Weil aber die Sprachen vornehmlich in den Mitteln auseinandergehen,
+durch welche sie der Darstellung Licht und Schatten oder das ihr
+gebührende Kolorit geben, so fordert die Topik als ihre notwendige
+Ergänzung eine <em>Tropik</em> oder eigentlich eine <em>Metaphorik</em>,
+wie wir sagen würden, wenn dieser Ausdruck üblich wäre, d. i. eine Lehre
+vom Verhältnisse der Metaphern in beiden Sprachen. Die Tropik kann der
+Topik nicht als ein selbständiger Hauptteil gleichgeordnet werden,
+sondern ist die zweite Unterabteilung der Topik selbst, indem sie die
+<span lang="la"><i>Translata</i></span> kennen lehrt im Gegensatze gegen
+die <span lang="la"><i>Propria</i></span>. Warum sich aber die Tropik
+auf die Lehre von den Metaphern beschränkt, die Synekdoche aber und die
+Metonymie in die Nachweisung der <span lang="la"><i>Propria</i></span>
+aufgenommen werden muß, beruht auf dem Unterschied dieser Figuren
+selbst, von welchen nur die Metapher der Prosa jenes oben erwähnte
+Kolorit gibt, die beiden andern dagegen Ersatzmittel für fehlende <span
+lang="la"><i>Propria</i></span> im Gebiete des bildlosen Ausdrucks
+gewähren.</p>
+<p>In diesen beiden Abschnitten wird aber der Sprachstoff erst in seinem
+unorganischen Verhalten betrachtet, in so fern er aus Wörtern und
+Ausdrücken besteht. Aber zu den Darstellungsmitteln, über welche eine
+Sprache verfügt, gehören auch die in ihr möglichen Formen der Sätze und
+Perioden, die Struktur und Verbindung derselben, kurz die organischen
+Gebilde, welche von ihr hervorgebracht werden. Der zweite Hauptteil der
+Stilistik wird also beide Sprachen hinsichtlich ihres Redebaues
+vergleichen, und wir nennen ihn deshalb <em>Architektonik</em>.</p>
+<hr />
+<p>Die vorstehenden Grundsätze Nägelsbach’s, auf denen die nachfolgende
+Lehre aufgebaut ist, sind gleich nach dem Erscheinen der 1. Aufl. der
+Stilistik (1846) von J. Müßell in d. Ztsch. f. <!-- PDF_PAGE: 23 -->
+Gymn. I (1847) S. 164 und in jüngster Zeit von Fr. Aug. Eckstein (Lat.
+u. Gr. Unterr. S. 316; vgl. Schmid’s Encykl. XI 674) als einseitig
+bezeichnet worden. Wenn man dies auch zugeben mag, so wäre es doch
+ungerecht, dem Standpunkt Nägelsbach’s auf dem Gebiet der Theorie des
+lat. Stils die Existenzberechtigung abzusprechen oder nur eine
+untergeordnete Bedeutung einzuräumen. Man hat zu bedenken, daß der
+lateinische Stil von verschiedenen Seiten aus, die alle als
+gleichberechtigt anzuerkennen sind, behandelt werden kann, und daß sich
+schwerlich eine Methode der Theorie finden lassen wird, die allen
+Anforderungen gerecht zu werden vermöchte, daß somit wohl jede
+Darstellungsweise von vorneherein den Stempel der Einseitigkeit an sich
+zu tragen hat.</p>
+<p>I. Geht man von dem Begriff und den Eigenschaften des Stils in den
+redenden Künsten, im besonderen in der ungebundenen Rede, also von dem
+Gedanken aus, daß die kunstgemäße Form der sprachlichen Darstellung den
+Grundgesetzen künstlerischer Darstellung überhaupt unterworfen sei, so
+wird die Theorie des lat. Stils im einzelnen nachzuweisen haben, in
+welcher Weise und bis zu welchem Grade diese Grundgesetze in den
+Erzeugnissen der römischen Prosalitteratur verwirklicht worden sind. Und
+wenn das Hauptgesetz aller künstlerischen Darstellung in der
+harmonischen Vereinigung der Grundidee der Wahrheit mit der der
+Schönheit besteht, die erstere Idee aber zur Forderung der sprachlichen
+und logischen Korrektheit, die letztere zur Forderung der Schönheit der
+Darstellung führt, so kann es keinem Zweifel unterliegen, daß von jenem
+Gesichtspunkt aus angesehen die Entwicklung aller der Eigenschaften, die
+aus den beiden stilistischen Grundforderungen hervorgehen, Gegenstand
+der Theorie des Stils überhaupt und ihre Anwendung auf das kunstmäßige
+Latein im besonderen Gegenstand der Theorie des lateinischen Stils sein
+muß. Was die Lehre von der sprachlichen Korrektheit betrifft, so müßte
+sie, da ihr Objekt, die <span lang="la"><i>locutio emendata et
+Latina</i></span>, nicht bloß in der Wahl und Verwertung
+echtlateinischer Wörter und Redensarten, sondern auch in der
+sprachgemäßen Flexion und Verbindung sowie Fügung der Wörter besteht,
+streng genommen auch das Gebiet, das heutzutage der Grammatik zugewiesen
+ist, in sich schließen; allein da die Grammatik von der Stillehre sich
+emanzipiert hat und zwar in noch höherem Grade als diese selbst von der
+Rhetorik, so pflegt man in der Lehre von der Sprachrichtigkeit die
+<!-- PDF_PAGE: 24 --> Kenntnis der Grammatik vorauszusetzen oder auf sie
+zu verweisen, obwohl die Grenzen zwischen ihr und diesem Abschnitt der
+Stillehre nicht scharf zu ziehen sind, weil ihre Gebiete in einander
+übergreifen (<em>Schmalz</em>, Hdb. II 365. 366). Indem wir von einer
+weiteren Gliederung des Stoffes, die sich aus dem begrenzten Begriff von
+der Sprachrichtigkeit sowie aus dem Begriffe der logischen und
+ästhetischen Korrektheit ergibt, absehen — denn es handelt sich hier nur
+um Skizzierung allgemeiner Gesichtspunkte —, fassen wir die Theorie,
+welche die lateinische Darstellungsweise, ohne auf ihre sie von andern
+Sprachen unterscheidenden Merkmale besonders zu achten, für sich allein
+betrachtet und die Eigenschaften des lateinischen Stils an den
+allgemeinen künstlerischen Gesetzen sowie an dem Nationalcharakter des
+römischen Volks und seinem Bildungsgrad bemißt, unter dem Namen der
+<strong>objektiven Theorie des lateinischen Stils</strong> zusammen. Ihr
+wissenschaftlicher Begründer ist <em>Ferdinand Hand</em>; seine Theorie
+ist die systematische rationelle Zusammenfassung alles dessen, was seit
+Laurentius Valla teils dunkel als Stillehre vorschwebte teils auf
+empirischen Einzelbeobachtungen beruhend äußerlich- und mechanisch
+erfaßt worden war; mit der ersten Ausgabe seines Lehrbuchs des lat.
+Stils, Jena 1833, beginnt die Epoche der wissenschaftlichen Begründung
+der objektiven Stiltheorie.</p>
+<p>Wenn der Endzweck einer solchen Theorie in der Erkenntnis besteht, in
+wie weit die nationale Eigentümlichkeit und Bildung der Römer in dem
+kunstgemäßen Ausdruck der Gedanken sich widerspiegelt, so wird die
+Theorie naturgemäß in erster Linie diejenige Kulturperiode umfassen
+müssen, in der die römische Gedankenwelt zur vollkommensten und reinsten
+Ausprägung durch das Wort gelangte und jene Vereinigung der Tugenden der
+Korrektheit und Schönheit, die das Klassische des Stils begründet,
+vollzogen wurde, also die Periode, in welcher der Prosastil zur
+Klassizität sich ausbildete. Nun bedingt die Verschiedenheit des
+Gedankenstoffs, der darzustellen ist, in Verbindung mit dem Zweck, der
+damit erreicht werden soll, eine Verschiedenheit der Gedankenform; es
+wird also die Theorie auch die verschiedenen Stilgattungen, die sich
+innerhalb der klassischen Periode ausbildeten, den geschichtlichen,
+rednerischen, wissenschaftlichen Stil u. s. w. ins Auge zu fassen haben.
+Werden diese Gattungen der Prosa für sich besonders behandelt, so
+ergeben sich gesonderte Theorien der historischen, oratorischen,
+didaktischen<!-- PDF_PAGE: 25; original word break: didak=|tischen -->
+Prosa u. s. w. als selbständige Abzweigungen von der allgemeinen
+objektiven Theorie des lateinischen Stils, Aufgaben, die in der
+philologischen Litteratur noch nicht gelöst sind. Richtet man dagegen
+das Augenmerk auf die Art und Weise, wie der Schriftsteller seine
+Individualität in die Darstellung der Gedanken legt und wie weit er sich
+den allgemeinen Gesetzen des künstlerischen Ausdrucks unterwirft, so
+ergeben sich als weitere Abzweigungen die Untersuchungen über den Stil
+eines bestimmten Schriftstellers, Aufgaben, die, wenn auch in Angriff
+genommen, doch erst der allseitigen Lösung entgegenharren.</p>
+<p>Aber die Normalperiode, an die sich die objektive Methode der
+Stillehre als ihren κανών zu halten hat, steht selbst mitten im Strome
+der Entwicklung, welche die römische Bildung nahm; ein Resultat der
+vorausgegangenen Bildungsbestrebungen und Ausgangspunkt für die
+nachfolgenden Zeiten mußte sie dennoch andern Stilbestrebungen und
+Geschmacksrichtungen weichen, welche im Geiste der Zeit lagen. Faßt man
+nun die Veränderungen ins Auge, denen der Prosastil im Laufe der
+Jahrhunderte unterworfen war, und führt im einzelnen den Gedanken aus,
+in wie weit die verschiedenen Zeiten den allgemeinen Stilgesetzen
+nachkamen und das Gepräge der Nationalität wahrten, bis zum Untergang
+der lateinischen Kunstsprache, so ergibt sich daraus Begriff und Aufgabe
+der historischen Stilistik, eine aus der in neuerer Zeit in Angriff
+genommenen Methode der historischen Grammatik mit Notwendigkeit
+hervorgehende Aufgabe, deren erste Lösung versucht zu haben das
+Verdienst des Herrn Direktors <em>J. H. Schmalz</em> in
+Tauberbischofsheim ist; mit seiner „Lateinischen Stilistik“ in des
+Bearbeiters Handbuch der klassischen Altertumswissenschaft, Bd. II
+Nördlingen 1885 S. 365—411 beginnt die Epoche der wissenschaftlichen
+Begründung der historischen Stiltheorie. Auch bei dieser Methode der
+Behandlung lassen sich verschiedene selbständige Abzweigungen denken;
+sie wird z. B. besonders fruchtbar für die Entwicklungsgeschichte der
+verschiedenen Stilgattungen werden können, und durch sie wird auch die
+ausgeführte Betrachtung des individuellen Stils einzelner
+Schriftsteller, welche einer bestimmten Litteraturperiode ihr Gepräge
+geben, erst ihren rechten Hintergrund erhalten.</p>
+<p>II. Einen andern Charakter als die objektive (systematische oder
+historische) Methode wird die Darstellung annehmen, wenn sie die
+Vergleichung der Eigentümlichkeiten des lateinischen Stils
+<!-- PDF_PAGE: 26 --> mit denen einer andern Sprache zum Vorwurf nimmt.
+Das Nächstliegende für den Verfasser einer komparativen Stilistik ist,
+die Eigentümlichkeiten des fremden Stils an seiner Muttersprache
+abzumessen. Der wissenschaftliche Begründer der Vergleichung des
+lateinischen Ausdrucks mit dem deutschen ist <em>Nägelsbach</em>; wenn
+er auch, wie Müßell <span lang="la"><i>l. l.</i></span> S. 169 mitteilt,
+einige Vorläufer hatte und die praktischen Schulübungen um so mehr auf
+eine solche Vergleichung führten als die deutsche Sprache immer mehr zur
+Grundlage des Unterrichts gemacht wurde, so datiert doch die methodische
+Durchführung der komparativen Stilistik erst vom J. 1846, dem Jahre des
+ersten Erscheinens der Nägelsbach’schen Stilistik. In ähnlichem Sinne
+bearbeitete die lateinische Stillehre für das Italienische <span
+lang="la"><i>Antonio Cima</i></span> in seinen <span
+lang="la"><i>Principii della stilistica latina, Milano</i></span> 1881
+(vgl. auch seine <span lang="la"><i>Breve teoria dello stile,
+Torino</i></span> 1883). Gesonderte von der Grammatik abgetrennte
+Bearbeitungen im Geiste der Vergleichung sind uns aus anderen
+Kulturländern nicht bekannt. Eine dankeswerte Aufgabe wäre jedenfalls
+auch eine Parallelstilistik des klassisch Lateinischen und des klassisch
+Griechischen; diese Vergleichung, ein anziehender Gegenstand bereits für
+die Römer, würde, mit der Methode der neuesten Zeit bearbeitet, einen
+wesentlichen Beitrag zur Einsicht in die Stileigentümlichkeiten der
+beiden antiken Kulturvölker liefern und zugleich zur gründlichen
+Erkenntnis der Unterschiede des antiken Stils vom modernen überhaupt
+führen <a href="#fn23" class="footnote-ref" id="fnref23"
+role="doc-noteref"><sup>23</sup></a>.</p>
+<p>Die vergleichende Behandlungsweise kann, von welcher Sprache sie auch
+ausgeht, eine verschiedene sein: sie kann zu einer Kombination mit der
+Methode der objektiven Theorie werden und in diesem Sinne hat <em>H. L.
+Schmitt</em> die Hand’sche Theorie umzugestalten gesucht; sie kann aber
+auch das Hauptgewicht auf die Eröffnung der Fundgruben des lateinischen
+Sprachschatzes für die Modernen legen und ihre Hauptaufgabe in dem
+Nachweis finden, wie weit der lateinische Ausdruck zur Deckung moderner
+Begriffe und Anschauungen ausreiche. Dies ist für das Deutsche
+<em>Nägelsbach’s</em> Standpunkt, von dem aus an die lateinische
+Stilistik heranzutreten eine um so dringendere Notwendigkeit wurde, je
+reicher sich die deutsche Sprache und Litteratur entwickelt hatte
+<!-- PDF_PAGE: 27 --> und je weiter der moderne Geist von dem antiken
+sich entfernte. Vgl. oben S. 16 ff. u. Nägelsbach’s Vorrede. Und weil
+diese Art der Behandlung einem unabweisbaren Bedürfnis unserer Zeit
+entgegenkam, hatte sie einen großen Erfolg zu verzeichnen und kann auch
+für die Folgezeit nicht als entbehrlich angesehen werden<a href="#fn24"
+class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a>,
+obwohl das Gebiet der lateinischen Stilistik in engere Grenzen gezogen
+ist als Mancher wünschen möchte. Aber dies liegt in der Begrenzung des
+Stoffes, die von dem eingenommenen Standpunkt bedingt ist, und kommt der
+Nägelsbach’schen Methode nicht ausschließlich zu.</p>
+<p>Denn wenn auch die objektiven und komparativen Theorien sich
+gegenseitig nicht ausschließen, so läßt doch jede die Gesichtspunkte der
+andern in den Hintergrund treten, so daß diese nicht zu ihrem vollen
+Rechte gelangen können. Die objektive Systematik, die in der Periode der
+Klassizität wurzelt, kann nicht umhin auch auf die
+Stileigentümlichkeiten der vorangegangenen und der nachfolgenden Zeiten
+einen Blick zu richten, aber dies geschieht mehr gelegentlich und
+fragmentarisch, so daß die historisch-genetische Betrachtungsweise sich
+nicht davon befriedigt fühlt; letztere dagegen wird sich der Vorteile
+begeben, welche die Systematik der ästhetischen Erkenntnis des
+klassischen Lateins zu bieten vermag. In beiden Methoden aber tritt die
+Rücksicht auf die Differenzen des Latein und einer andern Kultursprache,
+wenn sie auch berührt oder stillschweigend vorausgesetzt werden, zurück,
+während doch die genaue Kenntnis derselben dem Lateinschreibenden und
+ebenso dem Exegeten unentbehrlich ist; umgekehrt läßt die komparative
+Methode vieles von dem, was die systematische betont und die historische
+durchführt, unberücksichtigt, wiewohl sie sich gegen das, was
+Hauptgegenstand beider Methoden ist, keineswegs verschließt, wie denn
+ihr Hauptvertreter bei der Erörterung der Darstellungsmittel und Kräfte
+des Lateinischen dem modernen Deutsch gegenüber, um zu zeigen, wie weit
+der Genius der lateinischen Sprache gehen konnte und was er sich
+erlauben durfte, sich nicht auf das Normallatein der klassischen Epoche
+einschränkte, sondern auch Vorklassisches und Nachklassisches,
+insbesondere den Stil des <!-- PDF_PAGE: 28 --> Livius, für seine Zwecke
+heranzog, allerdings fragmentarisch, aber nicht anders als die
+objektiven Darstellungen das komparative Moment behandeln.</p>
+<p>III. Man spricht heutzutage von der „Zukunftsstilistik.“ Nach dem
+Vorausgegangenen wird die Aufgabe der verschiedenen stilistischen
+Darstellungen, abgesehen von denen, welche pädagogischen Zwecken dienen,
+in der Zukunft nicht darin bestehen können, daß die eine Weise die
+andere zu verdrängen sucht und sich — etwa durch den Kunstgriff des
+Pseudoeklektizismus — als die allein berechtigte aufspielt, sondern daß
+jede die Lehren, die sich aus dem eingenommenen Standpunkt ergeben,
+innerhalb fest gezeichneter Grenzen mit Konsequenz durchführt<a
+href="#fn25" class="footnote-ref" id="fnref25"
+role="doc-noteref"><sup>25</sup></a>. Es wird je nach der
+wissenschaftlichen Strömung der Zeit vielleicht eine Richtung vor der
+andern mit Vorliebe angebaut werden; aber aus der zeitweiligen
+Bevorzugung folgt keineswegs, daß man diese Richtung als die
+Zukunftsstilistik κατ’ ἐξοχήν zu betrachten hat, so wenig als die
+gegenwärtig begünstigte Wagner’sche Musik mit ihrem weitreichenden
+Einfluß als die absolute Zukunftsmusik angesehen werden kann. Die wahre
+„Stilistik der Zukunft“ wird vielmehr ein harmonischer Verein aller der
+neben einander hergehenden Bestrebungen sein, das Wesen des antiken
+Lateins von den verschiedensten Seiten zu beleuchten und so zur
+allseitigen fruchtbaren Erkenntnis zu bringen, und eine solche Stilistik
+wird so lange bestehen, als — jene wahrhaft kulturfeindlichen Mächte,
+die das Lateinische und Griechische oder eines von beiden aus dem
+Unterricht der zur höheren Bildung berufenen Jugend verdrängen wollen,
+nicht die Oberhand gewinnen und damit der Zukunft der klassischen
+Studien überhaupt den Lebensfaden abschneiden.</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Im Gegensatz zum Schrift- oder Kunstlatein ist das
+Volkslatein nicht untergegangen, sondern hat sich zu den romanischen
+Sprachen entwickelt, ähnlich wie aus dem Altgriechischen das
+Neugriechische, aus dem Altdeutschen das Neudeutsche hervorgegangen ist;
+vgl. Gustav Gröber’s belehrenden Aufsatz über Sprachquellen und
+Wortquellen des lat. Wörterbuchs in Wölfflin’s Archiv f. lat.
+Lexikographie u. Grammatik I 41 ff. (204 ff.).<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Rudolf von Raumer, Die Einwirkung des Christentums auf
+die althochdeutsche Sprache, Stuttgart 1845 S. 160 ff. Über das
+Bibellatein Hauptschrift: H. Rönsch, Itala und Vulgata, 2. Ausg. Marburg
+1875. Über Kirchenlatein: G. Koffmane, Geschichte des Kirchenlateins I.
+1. 2. Breslau 1879. 81. (Unvollendet).<a href="#fnref2"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Zum Beweise dienen unter andern die in das <span
+lang="la"><i>Missale Romanum</i></span> aufgenommenen Sequenzen ‘Dies
+irae’ (Thomas von Celano), ‘Stabat mater’ (Jacopone da Todi), ‘Lauda,
+Sion, salvatorem’ (Thomas von Aquino).<a href="#fnref3"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p><em>Franz Anton Specht</em>, Geschichte des
+Unterrichtswesens in Deutschland von den ältesten Zeiten bis zur Mitte
+des 13. Jahrhunderts, Stuttgart 1885 S. 41 ff.; <em>Hermann
+Schiller</em>, Lehrbuch der Geschichte der Pädagogik, Leipzig 1887 S. 40
+ff.<a href="#fnref4" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Man beachte z. B. die geradezu klassisches Kolorit
+tragende Periode <em>Bernhards von Clairvaux</em> <span lang="la"><i>De
+dilig. Deo c. 10, 28</i></span> (über den Zustand der geläuterten Seele
+im Jenseits): <span lang="la"><i>’Quomodo stilla aquae modica multo
+infusa vino deficere a se tota videtur, dum et saporem vini induit et
+colorem, et quomodo ferrum ignitum et candens igni simillimum fit
+pristina propriaque forma exutum, et quomodo solis luce perfusus aër in
+eandem transformatur luminis claritatem, adeo ut non tam illuminatus
+quam ipsum lumen videatur: sic omnem tunc in sanctis humanam
+affectionem</i></span> (Zuständigkeit) <span lang="la"><i>ineffabili
+quodam modo necesse erit a semet ipsa liquescere atque in Dei penitus
+transfundi voluntatem; alioquin quomodo omnia in omnibus erit Deus, si
+in homine de homine quicquam supererit?’</i></span> Über das mit vielen
+klassischen Reminiszenzen ausgestattete Latein des <em>Johannes von
+Salisbury</em> (<span lang="la"><i>Johannes Saresberiensis</i></span>)
+vgl. <em>C. Schaarschmidt</em>, Johannes Saresberiensis nach Leben und
+Studien, Schriften und Philosophie, Leipzig 1862.<a href="#fnref5"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Eine kurze, aber gerechte Würdigung des als barbarisch
+verschrieenen Lateins der Scholastiker bei <em>Friedrich Paulsen</em>,
+Geschichte des gelehrten Unterrichts u. s. w., Leipzig 1885 S. 27
+ff. und bei <em>G. Körting</em> <span lang="la"><i>Enc. I</i></span> S.
+128.<a href="#fnref6" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p><span lang="la"><i>Remigio Sabbadini, Storia del
+Ciceronianismo e di altre questioni letterarie nell’ età della
+rinascenza, Torino 1885.</i></span><a href="#fnref7"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p><em>G. Schwetschke</em>, Codex nundinarius Germaniae
+litteratae
+bisecularis<!-- PDF_PAGE: 7; original word break: bise-|cularis -->.
+Meß-Jahrbücher des deutschen Buchhandels von dem Erscheinen des ersten
+Meßkatalogs 1564 an bis 1846. Erster Teil. Halle 1850. Zweiter T. 1877;
+ein zu lehrreicher Statistik Anlaß bietendes Werk; Paulsen <span
+lang="la"><i>l. l.</i></span> S. 785—788.<a href="#fnref8"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Vgl. Rud. v. Raumer a. a. O. S. 74. 201, besonders
+Fr. Haase, <span lang="la"><i>De medii aevi studiis
+philologicis</i></span>, Breslau 1856; Thurot, <span
+lang="la"><i>Notices et extraits de divers manuscrits latins pour servir
+à l’histoire des doctrines grammaticales au moyen âge</i></span>, Paris
+1869; Joh. Wrobel, <span lang="la"><i>Eberhardi Bethuniensis
+Graecismus</i></span>, Vratislaviae 1887 Praef. p. VII ff.; Eckstein in
+Schmid’s Encyklopädie XI 505 ff. und im Lat. u. Griech. Unterricht S. 43
+ff.; Specht l. l. S. 111 ff.; Baebler, Beiträge zu einer Geschichte der
+lat. Grammatik im Mittelalter, Halle 1885.<a href="#fnref9"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>Karl v. Raumer’s Pädag. I 39 ff.; C. G. Zumpt in
+Schmidt’s Ztschr. f. Geschichtsw. IV 397 ff.; J. Vahlen, Lorenzo Valla,
+Wien 1864 (Berlin 1870), insbesondere Voigt l. l. II 382 ff. der Valla
+den „grammatischen Genius“ nennt.<a href="#fnref10"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>Ausführlicheres bei Ferdinand <em>Hand</em>, Lehrbuch
+des lateinischen Stils, Zweite Ausgabe. Jena 1839 S. 14—19; <em>Reinhold
+Kloß</em>, Neue Jahrbb. 32, 247 ff. und in dessen Handbuch der lat.
+Stilistik, hrsg. v. Richard Kloß, Leipzig 1874 S. 21 ff.; besonders bei
+Eckstein in Schmid’s Encykl. XI 527 ff; 671 ff.; Hermann Hagen in K.
+Reisig’s Vorlesungen über lat. Sprachwissenschaft mit Anm. v. Fr. Haase,
+Berlin 1880. Erste Lieferung §. 28 ff.; Frd. Heerdegen in des
+Bearbeiters Hdb. II 430 Anm.<a href="#fnref11" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>In diesem Buch tadelt er auch diejenigen, welche, um
+ihre Gelahrtheit zur Schau zu tragen, seltene Wörter wählen und durch
+eine dunkle Ausdrucksweise Bewunderung erregen wollen. Als Beispiel gibt
+er S. 5 (ed. Lips. 1703): <span lang="la"><i>‘omnium fere hominum mentes
+Protei alicuius genium induisse videntur, ut, quod incilarunt, jam
+elogio buccinent, quod impancrarunt, jam obvio gremio
+excipiant’</i></span> u. s. w.<a href="#fnref12" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn13"><p>Im Erlanger Sommerkataloge von 1744 wird
+<em>Heinecke</em> genannt <span lang="la"><i>vir his ipsis literis ad
+summum inter eruditos fastigium elatus</i></span>. <em>Mahne</em> sagt
+in der <span lang="la"><i>Vita Dan. Wyttenbachii ed. 2. p. 35:
+Heineccius, cujus fundamenta stili cultioris illa aetate classicam
+omnino auctoritatem in scholis nacta erant quaeque tunc temporis docti
+pariter atque semidocti veluti in sinu gestabant</i></span> (freilich
+auch ein befremdliches Latein).<a href="#fnref13" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn14"><p>Encyklopädie der Philologie. Nach dessen Vorlesungen im
+Winterhalbjahre 1798—99 herausg. v. <em>S. M. Stockmann</em>. Leipzig
+1845 S. 202: „Heineccii Buch mit Gesners Noten hat viele gute Ideen“.
+Doch fügt <em>Wolf</em> hinzu: „Von seinem Latein muß man sich nicht
+verführen lassen. Der Styl ist ekelhaft.“<a href="#fnref14"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn15"><p>Viel gesunder und vernünftiger ist der Geist, der in
+einer früheren Arbeit dieser Art herrscht, in <em>Benjamin
+Hederich’s</em> Promtuarium <!-- PDF_PAGE: 14 --> <span
+lang="la"><i>latinitatis probatae et exercitae</i></span> oder
+vollständiges deutsch-lateinisches Lexikon u. s. w. Leipzig 1729. Ebenso
+gesund und nüchtern sind gehalten <span lang="la"><i>Christ. Henr.
+Weissii. de stilo romano libri quinque.</i></span> Chemnit. 1724. Aber
+das Buch kam gegen <em>Heinecke</em> nicht auf. Man sieht aus
+<em>Weißmann’s</em> Lexikon, wie bis 1758 <em>Heinecke’s</em> Lehren
+gewirkt hatten.<a href="#fnref15" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn16"><p>Über die richtige Methodik der <span
+lang="la"><i>imitatio</i></span> in neuester Zeit <em>Eckstein</em>,
+Schmid’s Enc. XI 679.<a href="#fnref16" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn17"><p>Viel gebraucht waren <em>August Buchner’s</em>
+(Prof. in Wittenberg) <span lang="la"><i>De commutata ratione dicendi
+libri duo.</i></span> Viteberg. 1664 (Lips. 1686) und
+<em>Weißborn’s</em> <span lang="la"><i>Statera latinitatis dubiae et
+variatae.</i></span> Lips. 1709; s. <em>Eckstein</em> l. l., der noch
+andere Spezialschriften dieser Art aufzählt. Ein Seitenstück zu dem
+Kunststück des <em>Erasmus</em> gibt <em>Daniel Georg Morhof</em> im
+<span lang="la"><i>Polyhistor literarius.</i></span> Lübeck 1688 (die 4.
+Aufl. 1747) bei <em>Schmitt</em> in Hand’s Lehrb. S. 14.<a
+href="#fnref17" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn18"><p>Schon Leibniz hatte die deutsche Sprache als ein
+besonders geeignetes Organ für Philosophie bezeichnet: <span
+lang="la"><i>Dissertatio de stilo philosophico Nizolii, Opp.
+ed. Dutens.</i></span> IV, 1, 36 ff.<a href="#fnref18"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn19"><p>Auch unsere Uebungen des lat. Stils I. Heft 1829 (7.
+Aufl. besorgt v. J. A. Baumann 1882), II. H. 1830 (6. Aufl. bes. v. B.
+1883), III. H. 1837 (7. Aufl. bes. v. B. 1886) haben, wenn auch anfangs
+in sehr unvollkommener Ausführung, denselben Zweck verfolgt.<a
+href="#fnref19" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn20"><p>Eine ungünstige Beurteilung des Buches von Grysar gibt
+Eckstein <span lang="la"><i>l. l.</i></span> S. 673; s. auch Heinichen
+<span lang="la"><i>l. l.</i></span> S. 13.<a href="#fnref20"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn21"><p>Den Bedürfnissen der Schule diente längere Zeit
+hindurch, an Hand sich anschließend; <em>Fr. Ad. Heinichen</em>,
+Lehrbuch der Theorie des lateinischen Stils, Leipzig 1841 (2. Aufl.
+1848). In neuerer Zeit mehrten sich rasch die stilistischen Lehrbücher
+für die Schule: <em>E. Berger</em>, Lat. Stilistik für obere
+Gymnasialklassen. Coburg u. Leipzig 1861, 8. Aufl. bearb. v. <em>E.
+Ludwig</em>, Coburg 1886; <em>A. Haacke</em>, Lat. Stilistik für die
+oberen Gymnasialklassen, 2. Aufl. Berlin 1875, 3. Aufl.
+<!-- PDF_PAGE: 20 --> 1884; R. Bouterwek, <span lang="la"><i>Adversaria
+Latina</i></span> (Handbuch des lat. Stils für die Schüler oberer
+Gymnasialklassen), Berlin 1876; <em>B. Schmidt</em>, Kurzgefaßte Lat.
+Stilistik, Leipzig 1880, 2. Aufl. 1884; <em>C. C. Hense</em>, Lat.
+Stilistik f. obere Gymnasialklassen, Parchim 1881; <em>E. Schulze</em>,
+<span lang="la"><i>Adiumenta Latinitatis</i></span>. Grundzüge des lat.
+Stils in Verbindung mit Übersetzungsstücken, Leipzig 1883; <em>O.
+Drenckhahn</em>, Leitfaden zur lat. Stilistik, Berlin 1884, 2. Aufl.
+1886; <em>P. Klaucke</em>, Die wichtigsten Regeln der lat. Stilistik
+f. ob. Gymnkl., Berlin 1884; <em>J. Hauler</em>, Lat. Stilübungen für
+die oberen Klassen, Wien 1884; <em>H. Menge</em>, Repetitorium der lat.
+Syntax u. Stilistik, 5. Aufl. Wolfenbüttel 1885; <em>M. Heynacher</em>,
+Lehrplan der lat. Stilistik, Paderborn u. Münster 1885.<a
+href="#fnref21" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn22"><p>Die deutschlateinischen Wörterbücher, auf die man
+allenfalls verweisen könnte, behandeln, soweit sie mit unserem Zwecke
+konkurrieren, natürlicherweise die Prinzipien der Sache nicht, gewähren
+also durchaus keine wissenschaftliche Einsicht in den Unterschied der
+Sprachen. Auch lassen sich gegen sie vom pädagogischen Standpunkt aus
+gewichtige Bedenken erheben. — Übrigens haben wir hier zu rechtfertigen,
+warum wir im allgemeinen keine Rücksicht auf die besonderen
+Stilgattungen nehmen. Nach der Aufgabe, die wir uns gestellt haben,
+scheint uns dies unvermeidlich. Wir sollen und wollen dem Stilisten
+Darstellungsmittel verschaffen. Diese sind aber an sich betrachtet für
+alle prosaischen Stilgattungen (und nur von diesen reden wir) mit
+alleiniger Ausnahme der Tropen in den allermeisten Fällen dieselben. Der
+Briefsteller, der Historiker, der Redner, der Philosoph unterscheidet
+sich nicht durch ein verschiedenes Material von Worten, sondern durch
+einen verschiedenen Gebrauch dieses Materials. Die guten und klassischen
+Ausdrücke sind am rechten Orte und im schicklichen Zusammenhang in jeder
+Stilgattung verwendbar; vgl. <span lang="la"><i>Cic. or.</i> 3, 45,
+177</span>; <span lang="la"><i>Quintil.</i> 10, 1, 9</span>. Daß der
+Stil ein historischer, philosophischer u. s. w. werde, bewirkt nicht das
+einzelne Wort, die einzelne Struktur, sondern der das gegenseitige
+Verhältnis der Worte beherrschende Zweck und Gedanke. Haben freilich
+einzelne Ausdrücke von der Sprache ein für allemal ein besonderes
+Gepräge erhalten, wie z. B. manche Ausdrücke der familiären Rede, oder
+sind sie für eine Wissenschaft ausschließlich geschaffene Kunstausdrücke
+oder gehören sie erst dem silbernen Zeitalter der Latinität an, so
+ergibt sich dies teils von selbst aus den Quellen, aus welchen wir sie
+schöpfen, teils haben wir es ausdrücklich bemerkt. Dasselbe gilt von den
+organischen Sprachgebilden, welche unsere Architektonik kennen lehrt.
+Wir haben nur zu zeigen, welche Satz- und Periodenformen in der Sprache
+möglich sind. Die Auswahl der einzelnen für die bestimmte Stilgattung
+beruht nicht mehr auf stilistischer, sondern auf rhetorischer Einsicht.
+Würden wir in unserem Nachweise der Darstellungsmittel sogleich eine
+bestimmte Rücksicht auf die Stilgattung nehmen, so würden wir uns selbst
+widersprechend die Wissenschaften wieder vermengen, welche wir trennen
+wollen.<a href="#fnref22" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn23"><p>Dr. Krause in Warschau arbeitet im Anschluß an
+Nägelsbach an einer Griechischen Stilistik.<a href="#fnref23"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn24"><p>Freilich <em>F. Luterbacher</em> rechnet im Jahresb.
+des philol. Vereins, Ztsch. f. Gymn. 1884 S. 163, Nägelsbach’s Stilistik
+zu den Büchern, die jetzt an Bedeutung verloren haben und nicht mehr
+zitiert zu werden brauchen.<a href="#fnref24" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn25"><p>Vgl. das, was der Schöpfer der historischen Stilistik
+im Hdb. II 365 über sein Verhältnis zu Nägelsbach treffend bemerkt.<a
+href="#fnref25" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>

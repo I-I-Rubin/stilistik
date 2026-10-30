@@ -1,0 +1,156 @@
+%!TEX TS-program = lualatex
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[fontsize=20pt]{scrarticle} 
+%\documentclass[twocolumn,landscape,fontsize=7pt]{scrartcl}
+%\setlength{\columnsep}{.2in}
+%\usepackage{fontspec,xltxtra,xunicode}
+% omitting xltxtra permits full superscripts 
+% with crimson text
+\usepackage{fontspec}
+\usepackage{amsmath,amssymb}
+\usepackage[bidi=basic,english]{babel}
+\usepackage[normalem]{ulem}
+\usepackage{geometry}
+\usepackage{lmodern}
+\usepackage{iftex}
+\usepackage{unicode-math}
+
+%\geometry{footskip =.7cm,verbose,legalpaper,tmargin=0.2in,bmargin=.4in,lmargin=.5in,rmargin=.5in}
+\geometry{footskip =.3cm,verbose,letterpaper,tmargin=.5in,bmargin=.5in,lmargin=.5in,rmargin=.5in}
+
+%\geometry{footskip =.7cm,verbose,paperheight=8.5in,paperwidth=5.5in,tmargin=0.2in,bmargin=.1in,lmargin=.5in,rmargin=.5in} 
+%\usepackage[bidi=basic, english]{babel}
+
+\babelprovide[onchar=fonts ids]{ancientgreek}
+\babelprovide[onchar=fonts ids]{hebrew}
+
+\babelfont{rm}{Crimson Text}
+\babelfont[ancientgreek]{rm}{SBL_grk.ttf}
+\babelfont[hebrew]{rm}{SILEOT.ttf}
+
+% \setmainfont{Crimson Text}
+% \setromanfont[Mapping=tex-text]{Crimson Text}
+\setsansfont[Mapping=tex-text]{Crimson Text}
+\setmonofont[Mapping=tex-text]{Courier} 
+
+\let\Begin\begin
+\let\End\end
+
+% \setmainfont{Minion Pro}
+% \setromanfont[Mapping=tex-text]{Minion Pro}
+% \setsansfont[Mapping=tex-text]{Minion Pro}
+% \setmonofont[Mapping=tex-text]{Courier}
+% Use upquote if available, for straight quotes in verbatim environments
+\usepackage{upquote}
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+
+% \usepackage{xcolor}
+\usepackage{longtable,booktabs,array} 
+\newcounter{none} % for unnumbered tables 
+\usepackage{calc} % for calculating minipage widths
+
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+% \usepackage{footnotehyper}
+% \usepackage{footnote}
+% \makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+ \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+%\usepackage{selnolig}  % disable illegal ligatures
+\usepackage{bookmark}
+\usepackage{hyperref}
+\usepackage{xurl} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+
+
+\author{}
+\date{}
+% Prevents aux files from being created
+%\nofiles
+% Prevents the pages from being numbered
+\pagestyle{empty}
+
+
+\begin{document}
+%\vspace*{-1.5in}
+% \centerline{\includegraphics[width=7.5in]{/Users/michaelt/.pandoc/images/hdr.png}}
+%
+% % Adjust this if you want text to start at a different height on the page
+% \vspace*{-6.5 in}
+
+
+
+
+% \defaultfontfeatures{Scale=MatchLowercase}
+% \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+%\setromanfont[Mapping=tex-text,Contextuals={NoWordInitial,NoWordFinal,NoLineInitial,NoLineFinal},Ligatures={NoCommon}]{Hoefler Text}
+%\defaultfontfeatures{Mapping=tex-text} 
+%\setromanfont[ItalicFeatures={Contextuals={NoLineFinal,NoLineInitial}}]{Hoefler Text}
+
+
+% the following are needed under some circumstances to control the appearance of 
+% section and subsection headings, but are not compatible with all document types.
+%\usepackage{sectsty} 
+%\sectionfont{\rmfamily\mdseries\upshape\Large}
+%\subsectionfont{\rmfamily\mdseries\upshape\large} 
+%\subsubsectionfont{\rmfamily\mdseries\scshape\normalsize}
+
+% here's how I'm keeping komascript's silly preferences about 
+% section and subsection headings at bay.
+
+% \usepackage[flushmargin]{footmisc} % \usepackage[hang,flushmargin]{footmisc}
+% \setlength{\parindent}{0pt}
+% \setlength{\parskip}{6pt plus 2pt minus 1pt}
+%\newcommand{\cntrhead}[1]{\begin{center}#1\end{center}}
+
+%\newcommand{\boxy}[1]{\begin{scriptsize}\begin{quote}#1\end{quote}\end{scriptsize}}
+
+
+%\newcommand{\cntrhead}[1]{\begin{center}#1\end{center}}
+%\pagestyle{plain}
+
+
+\input{untitled_.tex}
+
+
+
+
+
+%
+% yours ever,
+%
+% \begin{figure}[htbp]
+% \includegraphics[width=1.5in]{/Users/michaelt/.pandoc/images/sig.jpeg}
+% \end{figure}
+%
+% Michael Thompson
+%
+% ~\\Professor of Philosophy\\University of Pittsburgh\\1001 Cathedral of
+% Learning\\Pittsburgh PA 15260
+%
+% (412) 445 7433\\\texttt{practical.wisdom@gmail.com}
+
+\end{document}
